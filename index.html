@@ -2,26 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Redirecting…</title>
-
-  <!-- Instant meta-refresh redirect -->
-  <meta http-equiv="refresh" content="0;url=https://watchanimedorara.netlify.app/">
-
-  <!-- Fallback for browsers with JS disabled -->
-  <noscript>
-    <meta http-equiv="refresh" content="0;url=https://watchanimedorara.netlify.app/">
-  </noscript>
-
-  <!-- JavaScript redirect as a backup -->
+  <title>Choose Your Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background: #f5f5f5;
+    }
+    h1 {
+      margin-bottom: 1em;
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .btn {
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      color: #fff;
+      background-color: #007acc;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+    }
+    .btn:hover {
+      background-color: #005fa3;
+    }
+  </style>
   <script>
-    window.location.replace("https://watchanimedorara.netlify.app/");
+    function goTo(url) {
+      window.location.replace(url);
+    }
   </script>
 </head>
 <body>
-  <p>Redirecting you to our site…</p>
-  <p>
-    If you are not redirected automatically, 
-    <a href="https://watchanimedorara.netlify.app/">click here</a>.
-  </p>
+  <h1>Where would you like to go?</h1>
+  <div class="button-container">
+    <button
+      class="btn"
+      onclick="goTo('https://watchanimedorara.netlify.app/')"
+    >
+      Go to ProjectZ
+    </button>
+    <button
+      class="btn"
+      onclick="goTo('https://watchdoraraanime.netlify.app/tools')"
+    >
+      Go to Dorara
+    </button>
+  </div>
+  <noscript>
+    <p><strong>JavaScript is disabled.</strong> Please click one of the links below:</p>
+    <ul>
+      <li><a href="https://watchanimedorara.netlify.app/">ProjectZ</a></li>
+      <li><a href="https://watchdoraraanime.netlify.app/tools">Dorara</a></li>
+    </ul>
+  </noscript>
 </body>
 </html>
